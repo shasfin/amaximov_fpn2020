@@ -1,0 +1,38 @@
+Wie können Computer so viele unterschiedliche Dinge darstellen, wie Text, Bilder und Videos, wenn sie nur Nullen und Einser speichern können?
+Wir haben schon gesehen, wie Computer ganze Zahlen darstellen können und letzte Woche hatten wir angefangen zu sehen, wie Computer reelle Zahlen approximieren können. Die Grundidee, wie wir schon gesehen haben, ist im Grunde genommen die Exponentialschreibweise, die wir schon aus der Chemie und aus der Physik kennen. Der Unterschied ist, dass Computer meistens in Basis 2 arbeiten und schränken die Anzahl der möglichen Exponenten und signifikanten Stellen ein.
+
+Um diese Einschränkungen sichtbar und anfassbar zu machen, werden wir folgende Analogie nutzen.
+Die Mantisse ist wie ein Wagen. Der Fahrer muss eine Eins sein. Der Wagen hat eine bestimmte Anzahl Sitzplätze. Die Zahlen, die da nicht reinpassen, werden nicht gespeichert. Der Wagen ist mobil und kann vom Universalkomma (alle wissen ja, dass im Zentrum vom Universum das Universalkomma steht, an welchem alle Zahlen dranhängen) zum Speicher gefahren werden. Aber damit man immer weiss, welche Zahl ursprünglich gemeint war, muss man auch wissen, wo der Wagen bezüglich dem Universalkomma stehen soll. Dazu ist ein Nagel zwischen dem Fahrersitz und dem ersten Passagiersitz eingehämmert und daran ist ein Seil gebunden. Dieser Seil hat zwei Enden: das negative Ende (nach links) und das positive Ende (nach rechts). Am Seil wird markiert, wie weit das Universalkomma ist.
+
+\begin{beispiel}
+Wir werden jetzt zusammen die Zahl 6.5 darstellen.
+
+Am Universalkomma hängt die Zahl dran.
+Der Wagen mit 5 Plätze kommt. Der Fahrer ist die grösste Zahl. Das ist ja das wichtigste. Wenn wir nichts anderes von der Zahl wissen werden als das, was im Wagen steht, wollen wir die signifikanteste Stelle sicher im Wagen drin haben.
+
+[Bild mit Wagen]
+
+Wir verbinden das Universalkomma mit dem Nagel am Wagen und markieren die Stelle am Seil.
+
+Jetzt können wir die Zahl speichern
+
+[Bild im Speicher]
+
+Im Computer wird das als Bitmuster gespeichert. Zuerst Vorzeichen, dann Exponent (Markierungen am Seil), dann Mantisse (die erste Eins ist eigentlich überflüssig).
+
+Dank dem Seil kann man den Wagen wiederherstellen im Bezug auf das Universalkomma und wieder ausrechnen, was das für eine Zahl war.
+
+\end{beispiel}
+
+\begin{beispiel}
+Nicht alle Zahlen lassen sich im Fliesskommazahlensystem genau darstellen. Manche müssen gerundet werden.
+Zum Beispiel, die Zahl 10.75 würde in Binär so aussehen (hängt am Universalkomma).
+
+[Bild mit Universalkomma]
+
+Dann kommt der Wagen mit 5 Plätze. Die erste Eins und noch 4 Bits steigen ein. Das Seil wird entsprechend gebunden und markiert.
+
+[Bild mit Wagen]
+
+Die letzte Eins wird nicht gespeichert. Es gibt kein Platz. Sie geht verloren.
+\end{beispiel}

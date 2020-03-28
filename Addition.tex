@@ -1,0 +1,55 @@
+Man kann Zahlen nicht nur speichern, sondern auch damit rechnen. In diesem Kapitel werden wir die Addition kennenlernen.
+
+\begin{beispiel}
+In diesem Beispiel rechnen wir 1/8 + 1/4.
+\end{beispiel}
+
+\begin{beispiel}
+In diesem Beispiel rechnen wir 2 + 3.
+\end{beispiel}
+
+\begin{aufgabe}
+Rechne folgende Summen aus. Die Mantissenlänge beträgt 5 Bits, der Exponent geht von -3 bis 3.
+\begin{enumerate}[(a)]
+\item 5/8 + 3/4
+\item 10 + 4.25
+\item 17/16 + 2
+\end{enumerate}
+\end{aufgabe}
+
+Die Addition im Fliesskommazahlensystem ist wie gewöhnlich kommutativ, weil wir immer die kleinste Zahl so verschieben, dass der ''Wagen'' unter dem ''Wagen'' der grösseren Zahl liegt und dann die Bits in den ''Wagen' zusammen addieren. In der folgenden Aufgabe werden wir prüfen, ob sie auch assoziativ ist.
+
+\paragraph{Lernaufgabe}:
+Wir werden jetzt herausfinden, ob die Addition bei den Fliesskommazahlen assoziativ ist. Dazu berechnen wir zweimal die gleiche Summe.
+Einmal als: 1/8 + 2/8 + 3/8 + 4/8 + 5/8 + 6/8 + 7/8 + 8/8 und einmal als: 8/8 + 7/8 + 6/8 + 5/8 + 4/8 + 3/8 + 2/8 + 1/8.
+Welchen Resultat erwartest du?
+Sind die zwei Summen gleich oder unterschiedlich?
+Ist Addition assoziativ?
+Nimm dir Zeit und rechne die zwei Summen tatsächlich aus bevor du weiter liest.
+
+Nein, die Addition im Fliesskommazahlensystem ist nicht assoziativ, weil man nur Zahlen zusammen rechnen kann, die innerhalb der Mantissenlänge liegen.
+
+\begin{aufgabe}
+Bei den reellen Zahlen, wenn man 1/8 + 1/8 + ... + 1/8 rechnet, kann man potenziell unendlich viele immer grössere Zahlen erreichen. Wir wissen, dass das Fliesskommazahlensystem nur endlich viele Zahlen darstellen kann. Also unsere Vermutung ist, dass wir nicht nicht höher als 15.5 gehen können, wenn wir 1/8 mehrmals addieren.
+Können wir 15.5 tatsächlich erreichen?
+Falls ja, wie viele 1/8 brauchen wir in der Summe, um 15.5 zu erreichen?
+Falls nein, was ist die grösste Zahl, die wir erreichen können, wenn wir beliebig viele 1/8 zusammen rechnen?
+\end{aufgabe}
+
+\paragraph{Kontrollfragen}
+\begin{enumerate}
+\item Warum muss man den ''Wagen verschieben'' wenn man zwei unterschiedlich grosse Zahlen zusammen addiert?
+\item Gregory behauptet, dass ''der Wagen bei der Summe dort stehen bleibt, wo er bei der grösseren Zahl steht''. Hat er Recht? Argumentiere.
+\item Hannah behauptet, dass die Addition bei den Fliesskommazahlen nicht kommutativ und nicht assoziativ ist. Hat sie recht? Argumentiere. 
+\item Der Ameisenkönig möchte ausrechnen, wie viele Ameisen braucht er, um 10 Reiskörnchen zu transportieren. Er weiss, dass eine Ameise 1/4 Reiskorn transportiert. Der Ameisefinanzminister hat dazu folgendes Programm geschrieben. Die Ameisencomputer arbeiten mit Fliesskommazahlen mit Mantissenlänge 5 und Exponenten zwischen -3 und 3 darstellt.
+\begin{lstlisting}[language=Python, caption={Programm vom Ameisenfinanzminister}]
+def nof_ameisen():
+    sum = 0.0
+    i = 0
+    while node != 10.0:
+    	i += 1
+       sum += 0.25
+    return i
+\end{lstlisting}
+Kann der Ameisenkönig mit diesem Programm die gewünschte Anzahl Ameisen herausfinden? Falls ja, wie viele Ameisen braucht er, um 10 Reiskörnchen zu transportieren laut diesem Programm? Falls nein, was ist die maximale Summe, die das Programm erreichen kann?
+\end{enumerate}
