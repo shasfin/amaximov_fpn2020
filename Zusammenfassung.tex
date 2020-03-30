@@ -1,9 +1,15 @@
-Wir haben gesehen, wie man im Computer reelle Zahlen approximiert. Da wir eine endliche Darstellung verwenden, gibt es eine endliche Anzahl Zahlen, die wir darstellen können. Es gibt eine grösste und eine kleinste positive Zahl.
+Wir haben gesehen, wie man im Computer reelle Zahlen durch \textbf{Fliesskommazahlen} approximieren kann. Da wir eine endliche Darstellung verwenden, gibt es eine endliche Anzahl Zahlen, die wir darstellen können. Es gibt also eine grösste und eine kleinste positive Zahl.
 
-Die grösste positive Zahl kriegen wir, wenn wir in der Mantisse nur Einser schreiben und den Exponent so weit wie möglich hochdrehen. Die kleinste positive Zahl kriegen wir, wenn wir in der Mantisse eine führende Eins schreiben und sonst nur Nullen und den kleinstmöglichen Exponenten wählen.
+Die \textbf{grösste positive Zahl} kriegen wir, wenn wir die grösstmögliche Mantisse mit dem grössmöglichen Exponenten kombiniren, d.h. die Mantisse besteht aus lauter Einser und der Exponent ist maximal.
 
-Wir haben gesehen, dass der kleinste Abstand zwischen zwei darstellbaren Zahlen wächst, wenn die Zahlen wachsen.
+Die \textbf{kleinste positive Zahl} kriegen wir, wenn wir die kleinstmögliche Mantisse mit dem kleinstmöglichen Exponenten kombinieren. Da wir in der Darstellung verlangen, dass das erste Bit der Mantisse eine Eins ist, besteht die kleinstmögliche Mantisse aus einer führenden Eins und vielen Nullen. Der Exponent ist minimal.
 
-Wir haben gelernt, wie man zwei Zahlen zusammen addiert. Wir haben gesehen, dass zwei darstellbare Zahlen sich nicht immer exakt addieren lassen. Wir haben auch gesehen, dass es einen Unterschied macht, in welcher Reihenfolge man Berechnungen ausführt. Die Addition ist bei Fliesskommazahlen kommutativ aber nicht assoziativ.
+Wir haben gelernt, die nächste und die vorherige darstellbare Zahl zu bestimmen. So haben wir gesehen, dass darstellbare Zahlen nicht gleichverteilt auf der Zahlengerade auftreten, sondern dass der \textbf{Abstand} zwischen benachbarten darstellbaren Zahlen wächst, wenn die Zahlen grösser werden.
 
-Die Fliesskommazahlen sind eine mächtige Darstellung, die mit wenig Bits sehr unterschiedliche Zahlen speichern kann. Das hat aber auch seine Grenzen. Wir müssen in Kauf nehmen, dass die Resultate der Berechnungen nicht immer 100\% genau sind.
+Mit den Fliesskommazahlen kann man auch rechnen. Wir haben insbesondere die \textbf{Addition} kennengelernt.
+
+Wenn man zwei Fliesskommazahlen zusammen addieren möchte, muss man sie zuerst zum gleichen Exponenten bringen, dann kann man die neuen Mantissen wie ganze Zahlen addieren. Am Schluss muss man sicherstellen, dass der Exponent und die Mantisse gültig sind: der Exponent muss zwischen dem minimalen und dem maximalen Exponenten sein, die Mantisse muss eine führende Eins haben.
+
+Wir haben gesehen, dass die Addition im Fliesskommazahlensystem Unterschiede zur Addition bei den reellen Zahlen aufweist. Erstens, nicht alle darstellbare Zahlen lassen sich exakt addieren. Zweitens, die Addition bei den Fliesskommazahlen ist \textbf{nicht assoziativ}. Es kann einen Unterschied machen, welche Teilsummen man zuerst berechnet.
+
+Die Fliesskommazahlen sind eine mächtige Darstellung, die mit wenig Bits sehr unterschiedliche Zahlen speichern kann. Das hat aber auch seine Grenzen. Wir müssen in Kauf nehmen, dass die Resultate der Berechnungen nicht immer exakt sind.
