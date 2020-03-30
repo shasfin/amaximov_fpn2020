@@ -12,7 +12,7 @@ In diesem Beispiel rechnen wir 2 + 3.
 Rechne folgende Summen aus. Die Mantissenlänge beträgt 5 Bits, der Exponent geht von -3 bis 3.
 \begin{enumerate}[(a)]
 \item 5/8 + 3/4
-\item 10 + 4.25
+\item 10 + 2.25
 \item 17/16 + 2
 \end{enumerate}
 \end{aufgabe}
@@ -29,20 +29,28 @@ Nimm dir Zeit und rechne die zwei Summen tatsächlich aus bevor du weiter liest.
 
 Nein, die Addition im Fliesskommazahlensystem ist nicht assoziativ, weil man nur Zahlen zusammen rechnen kann, die innerhalb der Mantissenlänge liegen.
 
-\begin{aufgabe}
-Bei den reellen Zahlen, wenn man 1/8 + 1/8 + ... + 1/8 rechnet, kann man potenziell unendlich viele immer grössere Zahlen erreichen. Wir wissen, dass das Fliesskommazahlensystem nur endlich viele Zahlen darstellen kann. Also unsere Vermutung ist, dass wir nicht nicht höher als 15.5 gehen können, wenn wir 1/8 mehrmals addieren.
-Können wir 15.5 tatsächlich erreichen?
-Falls ja, wie viele 1/8 brauchen wir in der Summe, um 15.5 zu erreichen?
-Falls nein, was ist die grösste Zahl, die wir erreichen können, wenn wir beliebig viele 1/8 zusammen rechnen?
+\begin{aufgabe}\label{ein_achtel}
+Betrachten wir die Summe \(1/8 + 1/8 + 1/8 + \dotsb + 1/8\).
+Bei den reellen Zahlen können wir mit solchen Summen auf beliebig grossen Zahlen kommen. Bei den Fliesskommazahlen kann das nicht gehen, weil, wie wir im vorherigen Kapitel gesehen haben, es eine grösste Fliesskommazahl gibt. Aber können wir diese Zahl auch tatsächlich erreichen?
+
+In einem Fliesskommazahlensystem mit Mantissenlänge \(5\) und Exponentenbereich von \(-3\) bis \(3\), was ist die grösste Zahl, die wir erreichen können, wenn wir beliebig viele \(1/8\) zusammen rechnen? Wie viele Summanden brauchen wir, um diese Zahl zu erreichen?
 \end{aufgabe}
 
-\paragraph{Kontrollfragen}
+\subsubsection*{\textcolor{blue-violet}{Teste dich selber}}
+\begin{aufgabe}\label{addition_kontrollfragen}
+Beantworte folgende Fragen:
+\begin{enumerate}[(a)]
+\item frage grage
+\end{enumerate}
+\end{aufgabe}
 \begin{enumerate}
 \item Warum muss man den ''Wagen verschieben'' wenn man zwei unterschiedlich grosse Zahlen zusammen addiert?
 \item Gregory behauptet, dass ''der Wagen bei der Summe dort stehen bleibt, wo er bei der grösseren Zahl steht''. Hat er Recht? Argumentiere.
 \item Hannah behauptet, dass die Addition bei den Fliesskommazahlen nicht kommutativ und nicht assoziativ ist. Hat sie recht? Argumentiere. 
-\item Der Ameisenkönig möchte ausrechnen, wie viele Ameisen braucht er, um 10 Reiskörnchen zu transportieren. Er weiss, dass eine Ameise 1/4 Reiskorn transportiert. Der Ameisefinanzminister hat dazu folgendes Programm geschrieben. Die Ameisencomputer arbeiten mit Fliesskommazahlen mit Mantissenlänge 5 und Exponenten zwischen -3 und 3 darstellt.
-\begin{lstlisting}[language=Python, caption={Programm vom Ameisenfinanzminister}]
+\end{enumerate}
+\begin{aufgabe}\label{ameisenkönigin}
+Die Ameisenkönigin möchte ausrechnen, wie viele Ameisen braucht sie, um \(10\) Reiskörnchen zu transportieren. Sie weiss, dass eine Ameise allein \(1/4\) Reiskorn transportiert. Die Ameisenkönigin hat dazu folgendes Programm geschrieben.
+\begin{lstlisting}[language=Python, caption={Programm von der Ameisenkönigin}]
 def nof_ameisen():
     sum = 0.0
     i = 0
@@ -51,5 +59,6 @@ def nof_ameisen():
        sum += 0.25
     return i
 \end{lstlisting}
-Kann der Ameisenkönig mit diesem Programm die gewünschte Anzahl Ameisen herausfinden? Falls ja, wie viele Ameisen braucht er, um 10 Reiskörnchen zu transportieren laut diesem Programm? Falls nein, was ist die maximale Summe, die das Programm erreichen kann?
-\end{enumerate}
+Die Ameisencomputer arbeiten mit Fliesskommazahlen mit Mantissenlänge \(5\) und Exponenten zwischen \(-3\) und \(3\).
+Kann die Ameisenkönigin mit diesem Programm die gewünschte Anzahl Ameisen herausfinden? Falls ja, wie viele Ameisen braucht sie, um 10 Reiskörnchen zu transportieren laut diesem Programm? Falls nein, was ist die maximale Summe, die das Programm erreichen kann?
+\end{aufgabe}
