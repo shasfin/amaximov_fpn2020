@@ -94,9 +94,11 @@
 \section*{Rahmenbedingungen}
 Die LPU richtet sich an SuS, die das zweite Semester des Ergänzungsfachs Informatik absolvieren. Die SuS haben Physik und angewandte Mathematik als Schwepunktfach gewählt, und haben keine besondere Mühe mit Mathematik.
 
-Die Fliesskommazahlen sind das zweite Thema im Modul \textbf{'Daten Darstellen'}. In diesem Modul beschäftigen wir uns grundsätzlich mit der Frage, warum man sagt, dass im Computer nur Nullen und Einser gespeichert werden, wenn wir doch alle sehen, dass im Computer Texte, Bilder und Videos gespeichert werden, die auf dem ersten Blick gar nichts mit Nullen und Einser zu tun haben. Das erste Thema des Moduls 'Daten Darstellen' waren ganze Zahlen. Die SuS haben die Zweierkomplement-Darstellung kennengelernt.
+Die Fliesskommazahlen sind das zweite Thema im Modul \textbf{'Daten Darstellen'}. In diesem Modul beschäftigen wir uns grundsätzlich mit folgender Frage: Warum sagt man, dass Computer nur Nullen und Einser speichern können, wenn wir doch alle sehen, dass Computer Texte, Bilder und Videos speichern?  Diese haben doch auf dem ersten Blick gar nichts mit Nullen und Einser zu tun.
 
-Diese LPU umfasst die zweite und dritte Stunde zum Thema Fliesskommazahlen. In der ersten Stunde, die nur kurz aufgefrischt wird, wurden die Fliesskommazahlen eingeführt und die Metapher  vom Kasten und Seil präsentiert. Diese Metapher ist unten genauer beschrieben.
+Das erste Thema des Moduls 'Daten Darstellen' waren ganze Zahlen. Die SuS haben die Zweierkomplement-Darstellung kennengelernt. Das zweite Thema, die Fliesskommazahlen, wurde schon in der vorherigen Stunde eingeführt, und die SuS haben sich schon mit der Kasten-und-Seil Metapher befasst\footnote{Diese Metapher wird genauer unten beschrieben}.
+
+Diese LPU umfasst die zweite und dritte Stunde zum Thema Fliesskommazahlen. In der zweiten Stunde liegt der Fokus auf der Verteilung von den Fliesskommazahlen auf dem Zahlenstrahl und in der dritten Stunde wird die Addition eingeführt.
 
 \section*{Stoffanalyse}
 \begin{figure}[H]
@@ -104,13 +106,23 @@ Diese LPU umfasst die zweite und dritte Stunde zum Thema Fliesskommazahlen. In d
 \includegraphics[width=\textwidth]{Pictures/Fliesskommazahlen_Concept_Map.png} 
 \end{figure}
 
-Die \textbf{Fliesskommazahlen} werden eingesetzt, um \textbf{reelle Zahlen} zu approximieren. Die reelle Zahlen werden in der Exponentialdarstellung in Basis 2 als \(x = (-1)^s m \cdot 2^e\) geschrieben, wobei \(s\) das \textbf{Vorzeichen} kodiert,
+Die \textbf{Fliesskommazahlen} werden eingesetzt, um \textbf{reelle Zahlen} zu approximieren. Die reelle Zahlen werden in der Exponentialdarstellung in Basis 2 als \(x = (-1)^s \cdot m \cdot 2^e\) geschrieben, wobei \(s\) das \textbf{Vorzeichenbit} ist, \(m\) die \textbf{Mantisse} und \(e\) der \textbf{Exponent}. Damit die Schreibweise eindeutig ist, verlangt man \(1 \leq m < 10\).
 
-Fokus
-Hier ist der Fokus auf die Verteilung von Fliesskommazahlen auf dem Zahlenstrahl. Wo sind sie näher zueinander, wo sind sie weiter voneinander, was ist die kleinste und die grösste Zahl, was sind die Nachbarzahlen.
-Mit der Arche schauen die SuS, was für Zahlen sind das, wie viele davon es gibt, was ist die grösste und die kleinste und wo sind sie auf dem Zahlenstrahl.
+In Computer steht für Exponent und Mantisse eine \textbf{endliche Anzahl Bits} zur Verfügung. Deswegen in einem Fliesskommazahlensystem mit fixer Mantissen- und Exponentenlänge kann man nur \textbf{endlich viele}  der \textbf{unendlich vielen} reellen Zahlen darstellen. Das bedeutet insbesondere, dass es eine \textbf{kleinste positive darstellbare Zahl}, nämlich \((-1)^0 \cdot 1.000\ldots000 \cdot 2^{e_{min}}\), und eine \textbf{grösste positive darstellbare Zahl}, nämlich \((-1)^0 \cdot 1.111\ldots111 \cdot 2^{e_{max}}\), gibt. Die Exponenten \(e_{min}\) und \(e_{max}\) sind der kleinste, bzw der grösste mögliche Exponent.
+
+Aus der endlichen und fixen Länge von Mantisse und Exponent folgt auch, dass die Fliesskommazahlen \textbf{diskret} sind: Während zwischen zwei reellen Zahlen gibt es immer eine dritte, findet man im Fliesskommazahlensystem Zahlenpaare, zwischen denen keine darstellbare Zahl existiert.
+
+In Gegensatz zu reellen oder ganzen Zahlen, die auf dem Zahlenstrahl \textbf{gleichmässig verteilt} sind, sind darstellbare Zahlen um die Null konzentriert\footnote{Um ganz exakt zu sein, müsste man aus dieser Beschreibung den Bereich zwischen der grössten negativen darstellbaren Zahl und der kleinsten positiven darstellbaren Zahl ausschliessen} und werden mit wachsendem Exponenten immer zerstreuter.
+
+Im Computer werden Fliesskommazahlen als \textbf{Bitmuster} kodiert: 1 Bit wird für das Vorzeichenbit \(s\) verwendet, eine fixe Anzahl Bits für die Mantisse \(m\), wobei man das führende ''\(1.\)'' weglässt und eine fixe Anzahl Bits für den Exponenten \(e\). Die Mantisse wird eins zu eins übernommen, während der Exponent wird ''zentriert'' indem man zu \(e\) den \textbf{Bias} addiert. Der Bias hängt von der Anzahl Bits ab, die für den Exponenten reserviert sind, und wird meistens so gewählt, dass \(e = 0\) durch die Bitfolge \texttt{100...0} dargestellt wird.
+
 
 \subsection*{Metapher vom Kasten und Seil}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Pictures/Kutsche.png} 
+\end{figure}
 
        Die SuS haben ausserdem in der vorherigen Stunde ein mechanisches Modell von Fliesskommazahlen gesehen, bestehend aus einem Holzkasten (Mantisse) mit einem Seil (Exponent).  Dieses Modell wird in dieser Stunde verwendet, um die Fliesskommazahlen besser kennenzulernen.
        Mit dem Kasten suchen die SuS die grösste und kleinste darstellbare Zahl, den Abstand zwischen benachbarten darstellbaren Zahlen und lernen, Fliesskommazahlen zu addieren. Bei der Addition sehen sie auch zwei Beispiele, wo das Ergebnis im Fliesskommazahlensystem mit der Intuition, die man aus den reellen Zahlen hat, nicht übereinstimmt.
