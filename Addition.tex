@@ -1,7 +1,7 @@
-Im vorherigen Kapitel haben wir gesehen, welche Zahlen in einem Fliesskommazahlensystem dargestellt werden können, das heisst welche Zahlen  exakt in einem Computer gespeichert werden können. Computer werden aber nicht nur zum Speichern von Zahlen verwendet, sondern auch für Berechnungen.  Auch bei Berechnungen verhalten sich Fliesskommazahlen nicht ganz wie reelle Zahlen. In diesem Kapitel werden wir dies am Beispiel der Addition erfahren. 
+Im vorherigen Kapitel haben wir gesehen, welche Zahlen in einem Fliesskommazahlensystem dargestellt werden können, das heisst welche Zahlen  exakt in einem Computer gespeichert werden können. Alle andere Zahlen werden gerundet. Computer werden aber nicht nur zum Speichern von Zahlen verwendet, sondern auch für Berechnungen.  Auch bei Berechnungen verhalten sich Fliesskommazahlen nicht ganz wie reelle Zahlen. In diesem Kapitel werden wir dies am Beispiel der Addition erfahren. 
 
 \begin{beispiel}
-Wir möchten \(1/4 + 1/8\) ausrechnen. Der erste Schritt ist beide Zahlen aufzuschreiben. Wie in den vorherigen Kapiteln, sind in violett die reelle Zahlen in Basis 2 aufgeschrieben und braune ''Kasten'' mit orangenem ''Seil'' verwendet, um Mantisse und Exponent zu veranschaulichen. Rechts wird das Bitmuster in der gewöhnlichen Form angegeben.
+Wir möchten \(1/4 + 1/8\) ausrechnen. Der erste Schritt ist beide Zahlen als Fliesskommazahlen aufzuschreiben. Wie in den vorherigen Kapiteln, sind in violett die reelle Zahlen in Basis 2 aufgeschrieben und braune ''Kasten'' mit orangenem ''Seil'' verwendet, um Mantisse und Exponent zu veranschaulichen. Rechts wird das Bitmuster in der gewöhnlichen Form angegeben.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{Pictures/Addition1-4and1-8_1.png}
@@ -48,15 +48,15 @@ Rechne folgende Summen aus. Die Mantissenlänge beträgt \(5\) Bits, der Exponen
 \end{enumerate}
 \end{aufgabe}
 
-Die Addition im Fliesskommazahlensystem ist wie gewöhnlich kommutativ, weil wir immer die kleinste Zahl so verschieben, dass ihr Kasten unter dem Kasten der grösseren Zahl steht und dann die Bits in beiden Kasten stellenweise zusammen addieren. In der folgenden Aufgabe werden wir prüfen, ob sie auch assoziativ ist.
+Die Addition im Fliesskommazahlensystem ist wie gewöhnlich kommutativ, weil wir immer die kleinste Zahl so verschieben, dass ihr Kasten unter dem Kasten der grösseren Zahl steht und dann die Bits in beiden Kasten stellenweise zusammen addieren.
 
-\begin{lernaufgabe*}\label{lernaufgabe_assoziativ}
-Du wirst jetzt herausfinden, ob die Addition bei den Fliesskommazahlen assoziativ ist. Berechne dazu zwei Mal die gleiche Summe in einem Fliesskommazahlensystem mit Mantissenlänge \(5\) und Exponenten von \(-3\) bis \(3\):
+\begin{aufgabe}\label{lernaufgabe_assoziativ}
+Berechne dazu zwei Mal die gleiche Summe in einem Fliesskommazahlensystem mit Mantissenlänge \(5\) und Exponenten von \(-3\) bis \(3\):
 Das erste Mal als \(1/8 + 2/8 + 3/8 + 4/8 + 5/8 + 6/8 + 7/8 + 8/8\) und das zweite Mal als \(8/8 + 7/8 + 6/8 + 5/8 + 4/8 + 3/8 + 2/8 + 1/8\).
 
-Welchen Resultat erwartest du? Sind die zwei Summen gleich oder unterschiedlich? Kannst du daraus folgern, ob Addition assoziativ ist?
+Welchen Resultat erwartest du? Sind die zwei Summen gleich oder unterschiedlich?
 Nimm dir Zeit und rechne die zwei Summen tatsächlich aus.
-\end{lernaufgabe*}
+\end{aufgabe}
 
 Die zwei Summen, die du ausgerechnet hast, liefern unterschiedliche Ergebnisse. Die erste liefert den exakten Wert \(4.5\), während bei der zweiten Summe kriegen wir im Fliesskommazahlensystem nur \(4.25\), und das obwohl der exakte Wert dargestellt werden kann. Das passiert, weil man bei den Fliesskommazahlen nur Zahlen der ähnlichen Grössenordnung exakt addieren kann. In der ersten Summe addieren wir die kleineren Summanden am Anfang, wenn die kumulative Summe noch nicht zu gross ist. In der zweiten Summe wächst die kumulative Summe sehr schnell, und irgendwann sind die Summanden zu klein bezüglich der kumulativen Summe, um einen Unterschied zu machen.
 
