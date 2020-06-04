@@ -8,7 +8,7 @@ Weil es endlich viele darstellbare Zahlen gibt, muss es eine kleinste und eine g
 \begin{beispiel}
 Wir konstruieren die grösste positive Zahl im Fliesskommazahlensystem mit Mantissenlänge \(5\) und Exponenten von \(-3\) bis \(3\).
 
-In violett wird die reelle Zahl in Basis 2 aufgeschrieben, in der zweiten Zeile kommt die ''Kasten-und-Seil''-Darstellung aus der Einführung, in der dritten Zeile das Bitmuster und als letztes die Exponentialschreibweise. Darstellungsübergreifend ist die Mantisse in braun markiert, der Exponent in Orange und das Vorzeichen in grün.
+In violett wird die reelle Zahl in Basis 2 aufgeschrieben, in der zweiten Zeile kommt die ''Kasten-und-Seil''-Darstellung aus der Einführung, in der dritten Zeile das Bitmuster und als letztes die binäre Exponentialschreibweise. Darstellungsübergreifend ist die Mantisse in braun markiert, der Exponent in Orange und das Vorzeichen in grün.
 
 Als erstes platzieren wir den Kasten. Damit die Zahl so gross wie möglich wird, muss der Kasten links vom Komma stehen, und zwar so weit entfernt wie möglich. Wir haben aber eine Einschränkung: Das Seil muss immer mit dem Komma verbunden bleiben.
 \begin{figure}[H]
@@ -29,7 +29,7 @@ Damit die Mantisse möglichst gross wird, muss sie aus lauter Einser bestehen.
 \includegraphics[width=0.85\linewidth]{Pictures/groessteZahl3.png}
 \end{figure}
 
-Die grösste darstellbare Zahl in diesem Fliesskommazahlensystem ist also \(15.5\).
+Die grösste positive darstellbare Zahl in diesem Fliesskommazahlensystem ist also \(15.5\).
 \end{beispiel}
 
 \begin{aufgabe}\label{kleinsteZahl-5-3}
@@ -46,9 +46,9 @@ Und was erwartest du für die kleinste positive darstellbare Zahl? Ist sie grös
 Konstruiere die grösste und die kleinste positive darstellbare Zahlen in diesem System.  Schreibe die Zahlen im ''Kasten-und-Seil''-Modell, als Bitmuster und in der binären Exponentialschreibweise auf und berechne den Dezimalwert. 
 \end{aufgabe}
 
-In der vorherigen Aufgabe hast du gesehen, welchen Einfluss die Mantissenlänge auf die grösste und kleinste positive darstellbare Zahlen haben. Das Ergebnis könnte überraschend kommen. Da wir ein Bit weniger für die Mantisse und gleich viele Bits für den Exponenten genommen haben, ist unser Bitmuste um ein Bit kürzer geworden und somit können wir höchstens halb so viele Zahlen darstellen als vorher. Trotzdem haben sich die grösste und die kleinste positive darstellbare Zahlen kaum verändert.
+In der vorherigen Aufgabe hast du gesehen, welchen Einfluss die Mantissenlänge auf die grösste und kleinste positive darstellbare Zahlen hat. Das Ergebnis könnte überraschend kommen. Da wir ein Bit weniger für die Mantisse und gleich viele Bits für die Exponentenkodierung genommen haben, ist unser Bitmuster um ein Bit kürzer geworden, und somit können wir höchstens halb so viele Zahlen darstellen als vorher. Trotzdem haben sich die grösste und die kleinste positive darstellbare Zahlen kaum verändert.
 
-Was passiert, wenn wir nun ein Bit weniger für den Exponenten nehmen?
+Was passiert, wenn wir nun ein Bit weniger für die Exponentenkodierung nehmen?
 
 \begin{aufgabe}\label{groesste-kleinste-5-2}
 Betrachte das Fliesskommazahlensystem mit Mantissenlänge \(5\) und mit nur \(2\) Bits, um den Exponenten zu kodieren.
@@ -59,7 +59,7 @@ Betrachte das Fliesskommazahlensystem mit Mantissenlänge \(5\) und mit nur \(2\
 \end{enumerate}
 \end{aufgabe}
 
-In der vorherigen Aufgabe hast du gesehen, welchen Einfluss die Länge der Exponentenkodierung auf die grösste und kleinste positive darstellbare Zahlen hat. Wie auch im Fliesskommazahlensystem mit Mantissenlänge \(4\) und \(3\) Bits für den Exponenten, können wir im Fliesskommazahlensystem aus Aufgabe \ref{groesste-kleinste-5-2} höchstens halb so viele Zahlen darstellen wie im Fliesskommazahlensystem mit Mantissenlänge \(5\) und \(3\) Bits für die Exponentenkodierung. Der Bereich der darstellbaren Zahlen hat sich dieses Mal extrem verändert.
+In der vorherigen Aufgabe hast du gesehen, welchen Einfluss die Länge der Exponentenkodierung auf die grösste und kleinste positive darstellbare Zahlen hat. Wie auch im Fliesskommazahlensystem mit Mantissenlänge \(4\) und \(3\) Bits für den Exponenten, können wir im Fliesskommazahlensystem aus Aufgabe \ref{groesste-kleinste-5-2} höchstens halb so viele Zahlen darstellen wie im Fliesskommazahlensystem mit Mantissenlänge \(5\) und \(3\) Bits für die Exponentenkodierung. Der Bereich der darstellbaren Zahlen hat sich dieses Mal aber extrem verändert.
 
 \begin{aufgabe}\label{groesste-kleinste-allgemein}
 Wie sehen die kleinste und die grösste positive darstellbare Zahlen im allgemeinen Fliesskommazahlensystem aus? Nehme Mantissenlänge \(m\) und Exponent zwischen \(e_{min}\) und \(e_{max}\) an. Schreibe die kleinste und die grösste positive darstellbare Zahl in diesem Fliesskommazahlensystem als Bitmuster und in der binären Exponentialdarstellung auf.
@@ -117,7 +117,7 @@ Betrachte die Zahl \(1\). Finde die nächstkleinste darstellbare Zahl. Ist der A
 \end{aufgabe}
 
 \begin{aufgabe}\label{nachbarn}
-Finde die nächste und die vorherige darstellbare Zahlen von folgenden Zahlen. Schreibe die Werte in der Dezimaldarstellung auf und stelle alle Zahlen als Bitmuster und in der Exponentialschreibweise dar. Bilde alle Zahlen, die in der Aufgabe und in deiner Lösung vorkommen, auf einem Zahlenstrahl ab. Was beobachtest du? Sind alle Nachbarn gleich entfernt?
+Finde die nächste und die vorherige darstellbare Zahlen von folgenden Zahlen. Schreibe die Werte in der Dezimaldarstellung auf und stelle alle Zahlen als Bitmuster und in der binären Exponentialschreibweise dar. Bilde alle Zahlen, die in der Aufgabe und in deiner Lösung vorkommen, auf einem Zahlenstrahl ab. Was beobachtest du? Sind alle Nachbarn gleich entfernt?
 \begin{enumerate}[(a)]
 \item 2
 \item 3
